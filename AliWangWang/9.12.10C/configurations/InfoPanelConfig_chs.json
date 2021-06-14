@@ -1,0 +1,22 @@
+[ {
+   "nick": "我的焦点",
+   "show": true,
+   "site": "/wwxb.1.2",
+   "type": 0,
+   "uid": "focus",
+   "url": "focus"
+}, {
+   "nick": "我的淘宝",
+   "show": true,
+   "site": "/wwxb.9.2",
+   "type": 0,
+   "uid": "MineTaoBao",
+   "url": "tao"
+}, {
+   "nick": "活动日历",
+   "show": false,
+   "site": "/wwxb.2.80",
+   "type": 0,
+   "uid": "calen",
+   "url": "calen"
+}]

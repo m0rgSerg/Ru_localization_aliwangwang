@@ -1,0 +1,13 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xparam>
+	<Item>
+		<ID>default</ID>
+		<theme>默认头像</theme>
+		<url>http://www.taobao.com/wwfiles/sysportrait/1.zip</url>
+	</Item>
+	<Item>
+		<ID>constellation</ID>
+		<theme>十二星座</theme>
+		<url>http://www.taobao.com/wwfiles/sysportrait/2.zip</url>
+	</Item>
+</xparam>

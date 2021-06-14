@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="utf-8">
+    <title>Хочу Хочу Главная панель</title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="dns-prefetch" href="https://img.alicdn.com">
+    <link rel="dns-prefetch" href="https://awp.taobao.com">
+    <link rel="dns-prefetch" href="https://tradecard.ww.taobao.com">
+    <link rel="dns-prefetch" href="https://wwbizapi.taobao.com">
+    <link rel="stylesheet" href="../public/panel/app.css">
+</head>
+<body ondragstart="return false">
+
+<div id="container">
+    <div style="height:100vh;display:flex;flex-direction:column;background-color:#E1F1FC">
+        <div class="theme-bg"></div>
+    </div>
+</div>
+
+<script>
+!(function (parseParam, global) {
+    var styleNode = document.getElementById('_themeStyle');
+    if (!styleNode) {
+        styleNode = document.createElement('style');
+        styleNode.id = '_themeStyle';
+        document.head.appendChild(styleNode);
+    }
+    global.updateTheme = function (data) {
+        if (typeof data === 'string') data = parseParam(data);
+        document.body.classList.toggle('theme-light', data.fontColor === '000000');
+        var bg = data.skinType === '1' ? `url('pic:skin|0?path=${data.suitId}_header.jpg')` :
+            data.skinType === '2' ? `url('pic:skin|1?path=${data.suitId}.jpg')` :
+            data.startColor ? `linear-gradient(135deg, #${data.startColor}, #${data.endColor})` :
+            'linear-gradient(135deg, #1A92ED, #46A8F3)';
+        styleNode.innerHTML = `.theme-bg {background-image: ${bg}}`;
+    }
+    global.updateTheme(location.search);
+})(function (str) {
+    var m = {};
+    str.split(/[?&]/).forEach(function (n) {
+        if (!n) return;
+        var t = n.split('=');
+        m[t[0]] = t[1] ? decodeURIComponent(t[1]) : t[1];
+    });
+    return m;
+}, window);
+</script>
+
+<script src="https://g.alicdn.com/retcode/log/log.js" charset="UTF-8" crossorigin></script>
+<script src="../public/panel/vendor.js" charset="UTF-8" crossorigin></script>
+<script src="../public/panel/app.js" charset="UTF-8" crossorigin></script>
+</body>
+</html>

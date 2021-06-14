@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>В правом нижнем углу всплывает окно</title>
+    <style>
+        html, body{margin: 0; padding: 0; font: 12px/22px simsun; background: #fff;overflow: hidden;}
+        #content > div{width: auto!important;}
+    </style>
+</head>
+<body ondragstart="return false">
+    <div id="content"></div>
+    <script>
+        function SetContent(html){
+            document.getElementById('content').innerHTML = html;
+        }
+
+        function SetTextContent(text){
+            document.getElementById('content').innerText = text;
+        }
+    </script>
+</body>
+</html>

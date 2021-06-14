@@ -1,0 +1,69 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+	<contentFormat><![CDATA[Искать "%s" в %s]]></contentFormat>
+	<SiteDefShowNums>6</SiteDefShowNums>
+	<KeySiteDefShowNums>6</KeySiteDefShowNums>
+	<SiteItemHeight>26</SiteItemHeight>
+	<SiteItemBigHeight>54</SiteItemBigHeight>
+	<SiteNormalTextColor>13067018</SiteNormalTextColor>
+	<SiteSearchTextColor>0</SiteSearchTextColor>
+	<SiteSearchKeyColor>3045963</SiteSearchKeyColor>
+	<SiteSearchNumColor>3045963</SiteSearchNumColor>
+	<KeyWordTextColor>14552</KeyWordTextColor>
+	<KeyWordBold>1</KeyWordBold>
+	<SearchWndDefShowNums>8</SearchWndDefShowNums>
+	<SearchWndItemHeight>26</SearchWndItemHeight>
+	<SearchWndItemBigHeight>54</SearchWndItemBigHeight>
+	<TaobaoContentNumFormat><![CDATA[О %ld элементов]]></TaobaoContentNumFormat>
+	<TaobaoContentViewAllFormat><![CDATA[посмотреть все %s элементы]]></TaobaoContentViewAllFormat>
+	<TaobaoSearchUrl><![CDATA[http://search.taobao.com/search?source=wangwang&q=%s]]></TaobaoSearchUrl>
+	<AliContentNumFormat><![CDATA[О результатах %ld]]></AliContentNumFormat>
+	<AliSearchUrl><![CDATA[http://s.1688.com/search/offer_search.htm?tracelog=immyt_wwsuggestion_30924&asker=ATC&keywords=%s]]></AliSearchUrl>
+	<SearchSite>
+		<logo>taobaologo.png</logo>
+		<siteName>Вся сеть</siteName>
+		<searchUrl><![CDATA[http://search.taobao.com/search?source=wangwang&q=%s]]></searchUrl>
+		<slEscapeKeyword>1</slEscapeKeyword>
+		<siteID>cntaobao</siteID>
+	</SearchSite>
+
+	<SearchSite>
+		<logo>alilogo.png</logo>
+		<siteName>Вся сеть</siteName>
+		<searchUrl><![CDATA[http://s.1688.com/search/offer_search.htm?tracelog=wangwang&keywords=%s]]></searchUrl>
+		<slEscapeKeyword>1</slEscapeKeyword>
+		<siteID>cnalichn</siteID>
+	</SearchSite>
+
+	<SearchSite>
+		<logo>yahoologo.png</logo>
+		<siteName>Yahoo China</siteName>
+		<searchUrl><![CDATA[http://www.yahoo.com.cn/search?p=%s]]></searchUrl>
+		<slEscapeKeyword>1</slEscapeKeyword>
+		<siteID>chnyahoo</siteID>
+	</SearchSite>
+
+	<SearchSite>
+		<logo>alisoft.png</logo>
+		<siteName>Алисофт</siteName>
+		<searchUrl><![CDATA[http://mall.alisoft.com/apps/shopwindow/showCategoryAppsAction!search.jspa?appSearchKeyword=%s]]></searchUrl>
+		<slEscapeKeyword>1</slEscapeKeyword>
+		<siteID>wangwang</siteID>
+	</SearchSite>
+
+	<SearchSite>
+		<logo>mamalogo.png</logo>
+		<siteName>Алимама</siteName>
+		<searchUrl><![CDATA[http://www.alimama.com/membersvc/exterface/exterAliWangWangSearch.htm?word=%s]]></searchUrl>
+		<slEscapeKeyword>1</slEscapeKeyword>
+		<siteID>cnalimam</siteID>
+	</SearchSite>
+
+	<SearchSite>
+		<logo>koubeilogo.png</logo>
+		<siteName>Yahoo из уст в уста</siteName>
+		<searchUrl><![CDATA[http://bendi.koubei.com/search/searchlocal.html?option.key=%s]]></searchUrl>
+		<slEscapeKeyword>1</slEscapeKeyword>
+		<siteID>cnkoubei</siteID>
+	</SearchSite>
+</root>

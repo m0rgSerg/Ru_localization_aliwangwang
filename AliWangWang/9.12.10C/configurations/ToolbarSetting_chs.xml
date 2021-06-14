@@ -1,0 +1,45 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<xparam>
+	<item>
+		<type>0</type>
+		<title>旺旺</title>
+		<icon>toolbar_ww.png</icon>
+		<icon2>toolbar_ww_offline.png</icon2>
+	</item>
+	<item>
+		<type>1</type>
+		<title>资讯</title>
+		<icon>toolbar_news.png</icon>
+		<jumpsub>#/news</jumpsub>
+	</item>
+
+	<item>
+		<type>2</type>
+		<title>订阅</title>
+		<icon>toolbar_goods.png</icon>
+		<jumpsub>#/goods</jumpsub>
+	</item>
+	<item>
+		<type>3</type>
+		<title>店铺</title>
+		<icon>toolbar_shop.png</icon>
+		<jumpsub>#/shop</jumpsub>
+	</item>
+	<item>
+		<type>4</type>
+		<title>我的</title>
+		<icon>toolbar_pscenter.png</icon>
+		<jumpsub>#/mine/order</jumpsub>
+	</item>
+<!-- 	<item>
+		<type>6</type>
+		<title>淘日历</title>
+		<icon>toolbar_calender.png</icon>
+		<jumpsub>#/calendar</jumpsub>
+	</item> -->
+	<item>
+		<type>7</type>
+		<title>搜索框</title>
+		<icon>toolbar_search.png</icon>
+	</item>
+</xparam>

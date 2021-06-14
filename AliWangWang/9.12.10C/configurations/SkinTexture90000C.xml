@@ -1,0 +1,93 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<xparam>
+  <Textures>
+ 	<icon>texture_default_mid.jpg</icon>
+	<small_icon>texture_default_small.jpg</small_icon>
+    <ToolTip>системные установки по умолчанию</ToolTip>
+    <SuiteID>systemdefaultid</SuiteID>
+    <time>0</time>
+    <userDefine>0</userDefine>
+    <textcolor>0xffffff</textcolor>
+  </Textures>
+  <Textures>
+    <icon>CD_mid.jpg</icon>
+    <small_icon>CD_small.jpg</small_icon>
+    <ToolTip>Классический винил</ToolTip>
+    <SuiteID>CD</SuiteID>
+    <time>0</time>
+    <userDefine>0</userDefine>
+    <textcolor>0xffffff</textcolor>
+  </Textures>
+  <Textures>
+    <icon>plume_mid.jpg</icon>
+    <small_icon>plume_small.jpg</small_icon>
+    <ToolTip>Красота крыльев</ToolTip>
+    <SuiteID>plume</SuiteID>
+    <time>0</time>
+    <userDefine>0</userDefine>
+    <textcolor>0xffffff</textcolor>
+  </Textures>
+  <Textures>
+    <icon>coffeetime_mid.jpg</icon>
+    <small_icon>coffeetime_small.jpg</small_icon>
+    <ToolTip>Перерыв на кофе</ToolTip>
+    <SuiteID>coffeetime</SuiteID>
+    <time>0</time>
+    <userDefine>0</userDefine>
+    <textcolor>0xffffff</textcolor>
+  </Textures>
+  <Textures>
+    <icon>robot_mid.jpg</icon>
+    <small_icon>robot_small.jpg</small_icon>
+    <ToolTip>Механизм</ToolTip>
+    <SuiteID>robot</SuiteID>
+    <time>0</time>
+    <userDefine>0</userDefine>
+    <textcolor>0xffffff</textcolor>
+  </Textures>
+  <Textures>
+    <icon>boat_mid.jpg</icon>
+    <small_icon>boat_small.jpg</small_icon>
+    <ToolTip>Вид на закат</ToolTip>
+    <SuiteID>boat</SuiteID>
+    <time>0</time>
+    <userDefine>0</userDefine>
+    <textcolor>0xffffff</textcolor>
+  </Textures>
+  <Textures>
+    <icon>flower_sky_mid.jpg</icon>
+    <small_icon>flower_sky_small.jpg</small_icon>
+    <ToolTip>Под цветком</ToolTip>
+    <SuiteID>flower_sky</SuiteID>
+    <time>0</time>
+    <userDefine>0</userDefine>
+    <textcolor>0xffffff</textcolor>
+  </Textures>
+  <Textures>
+    <icon>wheat_mid.jpg</icon>
+    <small_icon>wheat_small.jpg</small_icon>
+    <ToolTip>Пшеничный аромат переливается</ToolTip>
+    <SuiteID>wheat</SuiteID>
+    <time>0</time>
+    <userDefine>0</userDefine>
+    <textcolor>0xffffff</textcolor>
+  </Textures>
+  <Textures>
+    <icon>leaf_mid.jpg</icon>
+    <small_icon>leaf_small.jpg</small_icon>
+    <ToolTip>Один лист, один мир</ToolTip>
+    <SuiteID>leaf</SuiteID>
+    <time>0</time>
+    <userDefine>0</userDefine>
+    <textcolor>0xffffff</textcolor>
+  </Textures>
+  <Textures>
+    <icon>umbrella_mid.jpg</icon>
+    <small_icon>umbrella_small.jpg</small_icon>
+    <ToolTip>Зонтик Man Tian Hua</ToolTip>
+    <SuiteID>umbrella</SuiteID>
+    <time>0</time>
+    <userDefine>0</userDefine>
+    <textcolor>0xffffff</textcolor>
+  </Textures>
+</xparam>

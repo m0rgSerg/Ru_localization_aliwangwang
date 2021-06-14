@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Менеджер сообщений</title>
+  <meta charset="utf-8" />
+  <link rel="stylesheet" href="messageManager/vendor/bootstrap.css">
+  <link rel="stylesheet" href="messageManager/vendor/datepicker.css">
+  <link rel="stylesheet" type="text/css" href="messageManager/index.bundle.css" />
+  <!-- <link rel="stylesheet/less" href="messageManager/theme.css"> -->
+  <script src="messageManager/vendor/jquery.js" charset="utf-8"></script>
+  <script src="messageManager/vendor/datepicker.js" charset="utf-8"></script>
+  <!-- <script src="messageManager/vendor/less.js" charset="utf-8"></script> -->
+</head>
+<body>
+
+<div class="theme-bg">
+  <nav class="nc-wrap" id="J_ncWrap"><nc-plugin></nc-plugin></nav>
+  <header class="hd" id="J_hd">
+    <nav class="nav" id="J_nav">
+      <!--<div class="main-nav nav-wrap J_mainMenu"></div>-->
+      <div class="main-nav nav-wrap">Показать по категориям</div>
+      <div class="split"></div>
+      <div class="sub-nav">
+        <ul class="nav-wrap type-mode">
+          <li class="nav-item J_navItem" data-action="getGroupInfo" data-param="gid=-1" data-type="1">Контактное лицо</li>
+          <li class="nav-item J_navItem" data-action="getTribeList" data-type="2">группа</li>
+          <li class="nav-item J_navItem" data-action="renderVerifyNav" data-type="0">проверочное сообщение</li>
+          <li class="nav-item J_navItem" data-action="getSystemMsgTypeList" data-type="4">системная информация</li>
+          <!--<li class="nav-item J_moreMenu"></li>-->
+        </ul>
+        <ul class="nav-wrap time-mode">
+          <li class="nav-item J_navItem active">Настоящее время</li>
+          <li class="nav-item J_navItem">вчера</li>
+          <li class="nav-item J_navItem">Позавчера</li>
+          <li class="nav-item J_navItem">В течение недели</li>
+          <li class="nav-item J_navItem">В течение двух недель</li>
+        </ul>
+      </div>
+    </nav>
+
+    <div class="back hide" id="J_back"><span class="J_back"><i class="iconfont icon-xiangqian"></i>Вернуться на главную</span></div>
+
+    <nav class="right-menu">
+      <form name="search-form">
+        <ul class="nav-wrap normal-type">
+          <li class="nav-item J_report">Доказательство</li>
+          <li class="nav-item J_toolMenu"></li>
+          <li class="search-box">
+            <div class="search-input">
+              <input type="text" name="search-keywords" class="search-keywords" id="J_search" />
+              <i class="iconfont icon-sousuo search-submit"></i>
+              <input type="submit" class="search-submit" value="" />
+              <div class="search-options J_searchOptionPopup"></div>
+            </div>
+          </li>
+        </ul>
+      </form>
+    </nav>
+  </header>
+</div>
+<div class="content-wrap" id="J_content">
+  <div class="content">
+    <section class="left-content" id="J_leftContent"></section>
+    <section class="middle-content hide" id="J_midContent"></section>
+    <section class="right-content" id="J_rightContent">
+      <div class="top-content" id="J_topContent"></div>
+      <div class="msg-wrap imui-msg-normal-wrap msg-merge-wrap" id="J_msgWrap"></div>
+      <div class="msg-operation">
+        <div class="page-wrap" id="J_pageWrap"></div>
+        <div class="other">
+          <!--<i class="iconfont icon-rili"></i>-->
+          <span class="roam-menu J_roamMenu"></span>
+          <i class="iconfont icon-manyou J_yun"></i>
+          <i class="iconfont icon-shuaxin J_refresh"></i>
+          <i class="iconfont icon-shanchu J_deleteMsg"></i>
+        </div>
+      </div>
+    </section>
+  </div>
+</div>
+
+<!-- Скиннинга менеджера сообщений -->
+<script>
+!(function (parseParam, global) {
+    var styleNode = document.getElementById('_themeStyle');
+    if (!styleNode) {
+        styleNode = document.createElement('style');
+        styleNode.id = '_themeStyle';
+        document.head.appendChild(styleNode);
+    }
+    global.updateTheme = function (data) {
+        if (typeof data === 'string') data = parseParam(data);
+        document.body.classList.toggle('theme-light', data.fontColor === '000000');
+        var bg = data.skinType === '1' ? `url('pic:skin|0?path=${data.suitId}_chat.jpg')` :
+            data.skinType === '2' ? `linear-gradient(135deg, #${data.customColor}, #${data.customColor})` :
+            data.startColor ? `linear-gradient(135deg, #${data.startColor}, #${data.endColor})` : 'none';
+        styleNode.innerHTML = `.theme-bg {background-image: ${bg}}`;
+    }
+    global.updateTheme(location.search);
+})(function (str) {
+    var m = {};
+    str.split(/[?&]/).forEach(function (n) {
+        if (!n) return;
+        var t = n.split('=');
+        m[t[0]] = t[1] ? decodeURIComponent(t[1]) : t[1];
+    });
+    return m;
+}, window);
+</script>
+<script type="text/javascript" src="messageManager/vendor.js" charest="utf-8"></script>
+<script type="text/javascript" src="messageManager/index.js" charest="utf-8"></script>
+</body>
+</html>

@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Список доступа</title>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" href="../build/index.bundle.css" />
+</head>
+<body ondragstart="return false">
+
+<div id="container" class="container theme-bg">
+    <div class="userinfo-wrap" id="J_userinfoWrap"><userinfo></userinfo></div>
+    <div class="search-wrap" id="J_searchWrap"><search-plugin></search-plugin></div>
+    <div class="biz-nav-wrap" id="J_biznavWrap"><biz-nav></biz-nav></div>
+    <div class="conversation-list-wrap" id="J_conversationListWrap">
+</div>
+
+<script>
+!(function (parseParam, global) {
+    var styleNode = document.getElementById('_themeStyle');
+    if (!styleNode) {
+        styleNode = document.createElement('style');
+        styleNode.id = '_themeStyle';
+        document.head.appendChild(styleNode);
+    }
+    global.updateTheme = function (data) {
+        if (typeof data === 'string') data = parseParam(data);
+        document.body.classList.toggle('theme-light', data.fontColor === '000000');
+        var bg = data.skinType === '1' ? `url('pic:skin|0?path=${data.suitId}_chat.jpg')` :
+            data.skinType === '2' ? `linear-gradient(135deg, #${data.customColor}, #${data.customColor})` :
+            data.startColor ? `linear-gradient(135deg, #${data.startColor}, #${data.endColor})` : 'none';
+        styleNode.innerHTML = `.theme-bg {background-image: ${bg}}`;
+    }
+    global.updateTheme(location.search);
+})(function (str) {
+    var m = {};
+    str.split(/[?&]/).forEach(function (n) {
+        if (!n) return;
+        var t = n.split('=');
+        m[t[0]] = t[1] ? decodeURIComponent(t[1]) : t[1];
+    });
+    return m;
+}, window);
+</script>
+<script type="text/javascript" src="../build/vendor.js" charest="utf-8"></script>
+<script type="text/javascript" src="../build/index.js" charest="utf-8"></script>
+</body>
+</html>

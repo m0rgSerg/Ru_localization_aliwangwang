@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xparam>
+	<Item>
+		<ShortCut>/:^_^</ShortCut>
+		<Meaning>微笑</Meaning>
+		<OriginalFile>emotions2\SysEmotions\0.png</OriginalFile>
+		<FixedFile>emotions2\SysEmotions\0.png</FixedFile>
+		<GroupName></GroupName>
+		<IsSys>1</IsSys>
+	</Item>
+	<Item>
+		<ShortCut>/:^$^</ShortCut>
+		<Meaning>害羞</Meaning>
+		<OriginalFile>emotions2\SysEmotions\1.png</OriginalFile>
+		<FixedFile>emotions2\SysEmotions\1.png</FixedFile>
+		<GroupName></GroupName>
+		<IsSys>1</IsSys>
+	</Item>
+	<Item>
+		<ShortCut>/:Q</ShortCut>
+		<Meaning>吐舌头</Meaning>
+		<OriginalFile>emotions2\SysEmotions\2.png</OriginalFile>
+		<FixedFile>emotions2\SysEmotions\2.png</FixedFile>
+		<GroupName></GroupName>
+		<IsSys>1</IsSys>
+	</Item>
+	<Item>
+		<ShortCut>/:815</ShortCut>
+		<Meaning>偷笑</Meaning>
+		<OriginalFile>emotions2\SysEmotions\3.png</OriginalFile>
+		<FixedFile>emotions2\SysEmotions\3.png</FixedFile>
+		<GroupName></GroupName>
+		<IsSys>1</IsSys>
+	</Item>
+	<Item>
+		<ShortCut>/:809</ShortCut>
+		<Meaning>爱慕</Meaning>
+		<OriginalFile>emotions2\SysEmotions\4.png</OriginalFile>
+		<FixedFile>emotions2\SysEmotions\4.png</FixedFile>
+		<GroupName></GroupName>
+		<IsSys>1</IsSys>
+	</Item>
+</xparam>

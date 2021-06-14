@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>阿里旺旺错误页面</title>
+    <style>
+        body {margin:0;}
+        a {color: #333;text-decoration:none;font-size:12px;}
+        .wrap{display: flex;justify-content: center;align-items:center;width: 100vw;height: 100vh;}
+        .refresh {flex: 0 0 auto;width:136px;height:117px;max-width: 100%;max-height: 100%;}
+        .refresh img {max-width: 100%;max-height: 100%;}
+    </style>
+</head>
+<body oncontextmenu="return false;" ondragstart="return false;">
+<div class="wrap">
+    <a href="javascript:;" class="refresh" id="J_refresh"><img src="error.png" /></a>
+</div>
+<script>
+    window.onload = function(){
+        document.getElementById('J_refresh').onclick = function(){
+            window.aef && aef.util && aef.util.refresh();
+        }
+    }
+</script>
+</body>
+</html>

@@ -1,0 +1,67 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xparam>
+	<Item>
+		<ShortCut></ShortCut>
+		<Meaning></Meaning>
+		<OriginalFile>EmotionMgr\defEmotionDispImage.png</OriginalFile>
+		<FixedFile>EmotionMgr\defEmotionDispImage.png</FixedFile>
+		<GroupName>DefCusEmotions</GroupName>
+		<IsSys>1</IsSys>
+	</Item>
+	<Item>
+		<ShortCut></ShortCut>
+		<Meaning></Meaning>
+		<OriginalFile>EmotionMgr\sysEmotion.png</OriginalFile>
+		<FixedFile>EmotionMgr\sysEmotion.png</FixedFile>
+		<GroupName>SysEmotions</GroupName>
+		<IsSys>0</IsSys>
+	</Item>
+	<Item>
+		<ShortCut></ShortCut>
+		<Meaning></Meaning>
+		<OriginalFile>EmotionMgr\taodoll.png</OriginalFile>
+		<FixedFile>EmotionMgr\taodoll.png</FixedFile>
+		<GroupName>Кукла Сямэнь</GroupName>
+		<IsSys>0</IsSys>
+	</Item>
+	<Item>
+		<ShortCut></ShortCut>
+		<Meaning></Meaning>
+		<OriginalFile>EmotionMgr\wordEmotion.png</OriginalFile>
+		<FixedFile>EmotionMgr\wordEmotion.png</FixedFile>
+		<GroupName>Текстовые смайлы</GroupName>
+		<IsSys>0</IsSys>
+	</Item>
+	<Item>
+		<ShortCut></ShortCut>
+		<Meaning></Meaning>
+		<OriginalFile>EmotionMgr\alimama.png</OriginalFile>
+		<FixedFile>EmotionMgr\alimama.png</FixedFile>
+		<GroupName>Алимама</GroupName>
+		<IsSys>0</IsSys>
+	</Item>
+	<Item>
+		<ShortCut></ShortCut>
+		<Meaning></Meaning>
+		<OriginalFile>EmotionMgr\alimama.png</OriginalFile>
+		<FixedFile>EmotionMgr\alimama.png</FixedFile>
+		<GroupName>Алимама</GroupName>
+		<IsSys>0</IsSys>
+	</Item>
+	<Item>
+		<ShortCut></ShortCut>
+		<Meaning></Meaning>
+		<OriginalFile>EmotionMgr\tianmao.png</OriginalFile>
+		<FixedFile>EmotionMgr\tianmao.png</FixedFile>
+		<GroupName>Tmall</GroupName>
+		<IsSys>0</IsSys>
+	</Item>
+	<Item>
+		<ShortCut></ShortCut>
+		<Meaning></Meaning>
+		<OriginalFile>EmotionMgr\tianmao.png</OriginalFile>
+		<FixedFile>EmotionMgr\tianmao.png</FixedFile>
+		<GroupName>Tmall</GroupName>
+		<IsSys>0</IsSys>
+	</Item>
+</xparam>

@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Новое руководство по функциям</title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="dns-prefetch" href="https://img.alicdn.com">
+    <style>
+    body {margin:0;-webkit-user-select:none;}
+    #slider {width: 100vw;overflow: hidden;}
+    #slider .inner {transition: transform .8s cubic-bezier(0.770, 0.000, 0.175, 1.000);}
+    /*#slider .inner {display:flex;width: 400%;}*/
+    /*#slider .inner > img {display: block;flex:0 0 auto; width: 25%;}
+    #slide1:checked ~ .inner {transform:translate3d(0,0,0);}
+    #slide2:checked ~ .inner {transform:translate3d(-25%,0,0);}
+    #slide3:checked ~ .inner {transform:translate3d(-50%,0,0);}
+    #slide4:checked ~ .inner {transform:translate3d(-75%,0,0);}
+    #slide1:checked ~ .labels #label1,
+    #slide2:checked ~ .labels #label2,
+    #slide3:checked ~ .labels #label3,
+    #slide4:checked ~ .labels #label4 {width: 45px;background-color: #1A92ED;}
+    #slide1:checked ~ .control-left, #slide4:checked ~ .control-right{display: none;}*/
+    </style>
+    <script>
+    !(function () {
+        // >>>>>>>>>>>>>>> Измените в соответствии с фактическим количеством изображений <<<<<<<<<<<<<<<<<
+        const ITEM_COUNT = 3;
+
+        const styleStack = [];
+        styleStack.push(`#slider .inner {display:flex;width: ${ITEM_COUNT}00%;}`);
+        styleStack.push(`#slider .inner > img {display: block;flex:0 0 auto; width: ${100 / ITEM_COUNT}%;}`);
+        var tmp = '', i, percent;
+        for (i = 1; i <= ITEM_COUNT; i++) {
+            percent = (-100 / ITEM_COUNT) * (i - 1);
+            percent = percent ? (percent + '%') : percent;
+            styleStack.push(`#slide${i}:checked ~ .inner {transform:translate3d(${percent},0,0);}`);
+            tmp += `#slide${i}:checked ~ .labels #label${i}${i === ITEM_COUNT ? '' : ','}`;
+        }
+        tmp += `{width: 45px;background-color: #1A92ED;}`;
+        styleStack.push(tmp);
+        styleStack.push(`#slide1:checked ~ .control-left, #slide${ITEM_COUNT}:checked ~ .control-right{display: none;}`);
+        document.write(`<style>${styleStack.join('\n')}</style>`);
+        styleStack.length = 0;
+    })();
+    </script>
+    <style>
+    input[type="radio"] {display: none;}
+    #slider .labels {position: absolute;bottom: 20px;right: 20px;}
+    #slider .labels label {
+        background-color: #CCC;display: inline-block;cursor: pointer;
+        width: 10px;height: 10px;border-radius: 5px;margin-left: 5px;
+        transition: background-color .3s ease, width .8s cubic-bezier(0.770, 0.000, 0.175, 1.000);
+    }
+    .fn-btn, .fn-control {z-index: 10;text-decoration: none;}
+    .fn-close {position: absolute;font-size: 26px;right: 0;top: 0;padding: 5px;color:#1A92ED;}
+    .fn-close:hover {color:red;}
+    .fn-control {
+        position: fixed;display: flex;align-items:center;justify-content: center;
+        font-size: 26px;top:calc(50vh - 40px);background-color: rgba(26, 146, 237, 0.2);
+        width: 80px;height: 80px;border-radius: 50%;
+        transition: background-color .4s ease, color .4s ease;color:rgba(26, 146, 237, 0.3);
+    }
+    .fn-control:hover {background-color: rgba(26, 146, 237, 0.35);color:rgba(26, 146, 237, 0.45);}
+    .fn-control.control-left {left: -50px;text-indent:40px;}
+    .fn-control.control-right {right: -50px;text-indent:-25px}
+    </style>
+</head>
+<body ondragstart="return false">
+
+<div class="container" id="container">
+    <a href="javascript:workbench.hostWindow.close()" class="fn-btn fn-close" id="J_close">&times;</a>
+    <div class="slider" id="slider">
+        <!-- input、img、labelЭтикетки зависят от количества изображений -->
+        <!-- Первый входной тег плюс проверенный атрибут -->
+        <!-- Добавьте атрибут usemap = "actionMap" к последнему тегу img. -->
+        <input type="radio" name="slider" value="1" id="slide1" checked>
+        <input type="radio" name="slider" value="2" id="slide2">
+        <input type="radio" name="slider" value="3" id="slide3">
+        <div class="inner">
+            <img src="alires:///offlinepkg/ww/images/guide1.jpg" alt="">
+            <img src="alires:///offlinepkg/ww/images/guide2.jpg" alt="">
+            <img src="alires:///offlinepkg/ww/images/guide3.jpg" alt="" usemap="actionMap">
+        </div>
+        <div class="labels">
+            <label id="label1" for="slide1"></label>
+            <label id="label2" for="slide2"></label>
+            <label id="label3" for="slide3"></label>
+        </div>
+        <a href="javascript:void(0)" class="fn-control control-left">&laquo;</a>
+        <a href="javascript:void(0)" class="fn-control control-right">&raquo;</a>
+        <map name="actionMap" id="actionMap">
+            <!-- Координатное положение - это фактическая область щелчка. -->
+            <area shape="rect" coords="157,296,344,329" id="J_go" href="javascript:workbench.hostWindow.close()" alt="">
+        </map>
+    </div>
+</div>
+
+<script>
+// Кнопка закрытия
+Array.prototype.forEach.call(document.querySelectorAll('#J_close, #J_go'), function (node) {
+    node.addEventListener('click', function (e) {
+        e.preventDefault();
+        window.workbench ? workbench.hostWindow.close() : window.close()
+    })
+});
+// Левый и правый элемент управления
+document.addEventListener('click', function (e) {
+    var target = e.target;
+    if (target.matches && target.matches('.fn-control')) {
+        e.preventDefault();
+        var dir = target.classList.contains('control-left') ? -1 : 1;
+        var curr = parseInt(document.querySelector('input:checked').value);
+        var next = document.querySelector('#slide' + (curr + dir));
+        next && (next.checked = true)
+    }
+})
+</script>
+</body>
+</html>

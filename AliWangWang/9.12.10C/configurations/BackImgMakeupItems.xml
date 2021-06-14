@@ -1,0 +1,66 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xparam>
+	<item>
+		<strThemeID>blackbuilding</strThemeID>
+		<strThemeName>Угловая ночь</strThemeName>
+		<bIsOnUsed>0</bIsOnUsed>
+		<bIsUserDefined>0</bIsUserDefined>
+		<bIsUsedForRand>0</bIsUsedForRand>
+	</item>
+	<item>
+		<strThemeID>plume</strThemeID>
+		<strThemeName>Красота крыльев </strThemeName>
+		<bIsOnUsed>0</bIsOnUsed>
+		<bIsUserDefined>0</bIsUserDefined>
+		<bIsUsedForRand>1</bIsUsedForRand>
+	</item>
+	<item>
+		<strThemeID>blueberry</strThemeID>
+		<strThemeName>Летняя черника</strThemeName>
+		<bIsOnUsed>0</bIsOnUsed>
+		<bIsUserDefined>0</bIsUserDefined>
+		<bIsUsedForRand>1</bIsUsedForRand>
+	</item>
+	<item>
+		<strThemeID>redwall</strThemeID>
+		<strThemeName>Красная стена голубое небо</strThemeName>
+		<bIsOnUsed>0</bIsOnUsed>
+		<bIsUserDefined>0</bIsUserDefined>
+		<bIsUsedForRand>1</bIsUsedForRand>
+	</item>
+	<item>
+		<strThemeID>boat</strThemeID>
+		<strThemeName>Вид на закат</strThemeName>
+		<bIsOnUsed>0</bIsOnUsed>
+		<bIsUserDefined>0</bIsUserDefined>
+		<bIsUsedForRand>1</bIsUsedForRand>
+	</item>
+	<item>
+		<strThemeID>flower_sky</strThemeID>
+		<strThemeName>Под цветком</strThemeName>
+		<bIsOnUsed>0</bIsOnUsed>
+		<bIsUserDefined>0</bIsUserDefined>
+		<bIsUsedForRand>1</bIsUsedForRand>
+	</item>
+	<item>
+		<strThemeID>wheat</strThemeID>
+		<strThemeName>Пшеничный аромат переливается</strThemeName>
+		<bIsOnUsed>0</bIsOnUsed>
+		<bIsUserDefined>0</bIsUserDefined>
+		<bIsUsedForRand>1</bIsUsedForRand>
+	</item>
+	<item>
+		<strThemeID>leaf</strThemeID>
+		<strThemeName>Один лист, один мир</strThemeName>
+		<bIsOnUsed>0</bIsOnUsed>
+		<bIsUserDefined>0</bIsUserDefined>
+		<bIsUsedForRand>1</bIsUsedForRand>
+	</item>
+	<item>
+		<strThemeID>lake</strThemeID>
+		<strThemeName>Горы и озера</strThemeName>
+		<bIsOnUsed>0</bIsOnUsed>
+		<bIsUserDefined>0</bIsUserDefined>
+		<bIsUsedForRand>1</bIsUsedForRand>
+	</item>
+</xparam>

@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>История сообщений</title>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="history/vendor/bootstrap.css">
+    <link rel="stylesheet" href="history/vendor/datepicker.css">
+    <link rel="stylesheet" type="text/css" href="history/index.bundle.css" />
+    <script src="history/vendor/jquery.js"></script>
+    <script src="history/vendor/datepicker.js"></script>
+</head>
+
+<body>
+    <div class="page">
+        <div id="J_msgtab"></div>
+        <div class="msg-outer-body">
+            <div id="J_msgWrap" class="msg-wrap imui-msg-normal-wrap"></div>
+        </div>
+        <div class="search hide" id="J_searchWrap"></div>
+        <div class="operation" id="J_operationWrap">
+            <div class="o-l">
+                <i class="iconfont icon-sousuo J_searchTrigger" title="искать"></i>
+                <span class="calender-wrap">
+        <i class="iconfont icon-rili"></i>
+        <input type="text" id="J_datePicker" class="date-picker" data-date-end-date="0d" title="Сообщение о выборе календаря">
+      </span>
+                <i class="iconfont icon-heart J_getAttentionUser showInMulti" title="Просмотр сообщений подписчиков"></i>
+            </div>
+            <div class="o-r">
+                <div class="roam-wrap">
+                    <i class="iconfont icon-manyou J_roam" title="Сообщение в роуминге"></i>
+                    <div class="roam-drop-menu" title="Сообщение в роуминге"></div>
+                </div>
+                <div class="pagination-wrap"></div>
+            </div>
+        </div>
+    </div>
+    <script type="text/javascript" src="history/vendor.js" charest="utf-8"></script>
+    <script type="text/javascript" src="history/index.js" charest="utf-8"></script>
+</body>
+
+</html>

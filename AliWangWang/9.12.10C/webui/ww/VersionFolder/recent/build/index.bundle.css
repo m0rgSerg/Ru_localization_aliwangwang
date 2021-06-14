@@ -1,0 +1,1521 @@
+.popup-over {
+  position: fixed;
+  z-index: 1000; }
+.toast {
+  position: fixed;
+  top: 50%;
+  left: 50%; }
+  .toast span {
+    margin-left: -50%;
+    margin-top: -50%;
+    background: rgba(0, 0, 0, 0.8);
+    color: #fff;
+    border-radius: 4px;
+    padding: 10px 20px;
+    font-size: 14px; }
+.image-toolbar {
+  height: 26px;
+  border: 1px solid #8daec4;
+  border-radius: 2px;
+  display: flex;
+  flex-flow: row nowrap;
+  background-color: #def2f6;
+  box-shadow: 1px 1px 6px 0px #999;
+  -webkit-user-select: none; }
+  .image-toolbar li {
+    width: 20px;
+    height: 20px;
+    line-height: 20px;
+    margin: 2px 3px;
+    border: 1px solid transparent;
+    border-radius: 2px;
+    text-indent: 999px;
+    overflow: hidden;
+    cursor: pointer;
+    transition: all 0.8s; }
+  .image-toolbar .emot-icon {
+    background: url("../images/icon-add-emotion.png") -2px -1px no-repeat; }
+  .image-toolbar .save-icon {
+    background: url("../images/icon-save-pic.png") -2px -1px no-repeat; }
+  .image-toolbar .edit-icon {
+    background: url("../images/icon-edit-pic.png") -1px -1px no-repeat; }
+.imui-msg-link-box {
+  width: 210px !important;
+  padding: 10px 10px 10px 30px !important; }
+  .imui-msg-link-box .warning-icon {
+    background: url("../images/error.png") no-repeat !important;
+    background-size: 100% !important;
+    border-radius: 0 !important; }
+    .imui-msg-link-box .warning-icon:before {
+      content: "" !important; }
+@charset "UTF-8";
+/*! normalize.css v3.0.3 | MIT License | github.com/necolas/normalize.css */
+html {
+  font-family: sans-serif;
+  -ms-text-size-adjust: 100%;
+  -webkit-text-size-adjust: 100%; }
+
+body {
+  margin: 0; }
+
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+main,
+menu,
+nav,
+section,
+summary {
+  display: block; }
+
+audio,
+canvas,
+progress,
+video {
+  display: inline-block;
+  vertical-align: baseline; }
+
+audio:not([controls]) {
+  display: none;
+  height: 0; }
+
+[hidden],
+template {
+  display: none; }
+
+a {
+  background-color: transparent; }
+
+a:active,
+a:hover {
+  outline: 0; }
+
+abbr[title] {
+  border-bottom: 1px dotted; }
+
+b,
+strong {
+  font-weight: bold; }
+
+dfn {
+  font-style: italic; }
+
+h1 {
+  font-size: 2em;
+  margin: 0.67em 0; }
+
+mark {
+  background: #ff0;
+  color: #000; }
+
+small {
+  font-size: 80%; }
+
+sub,
+sup {
+  font-size: 75%;
+  line-height: 0;
+  position: relative;
+  vertical-align: baseline; }
+
+sup {
+  top: -0.5em; }
+
+sub {
+  bottom: -0.25em; }
+
+img {
+  border: 0; }
+
+svg:not(:root) {
+  overflow: hidden; }
+
+figure {
+  margin: 1em 40px; }
+
+hr {
+  box-sizing: content-box;
+  height: 0; }
+
+pre {
+  overflow: auto; }
+
+code,
+kbd,
+pre,
+samp {
+  font-family: monospace, monospace;
+  font-size: 1em; }
+
+button,
+input,
+optgroup,
+select,
+textarea {
+  color: inherit;
+  font: inherit;
+  margin: 0; }
+
+button {
+  overflow: visible; }
+
+button,
+select {
+  text-transform: none; }
+
+button,
+html input[type="button"],
+input[type="reset"],
+input[type="submit"] {
+  -webkit-appearance: button;
+  cursor: pointer; }
+
+button[disabled],
+html input[disabled] {
+  cursor: default; }
+
+button::-moz-focus-inner,
+input::-moz-focus-inner {
+  border: 0;
+  padding: 0; }
+
+input {
+  line-height: normal; }
+
+input[type="checkbox"],
+input[type="radio"] {
+  box-sizing: border-box;
+  padding: 0; }
+
+input[type="number"]::-webkit-inner-spin-button,
+input[type="number"]::-webkit-outer-spin-button {
+  height: auto; }
+
+input[type="search"] {
+  -webkit-appearance: textfield;
+  box-sizing: content-box; }
+
+input[type="search"]::-webkit-search-cancel-button,
+input[type="search"]::-webkit-search-decoration {
+  -webkit-appearance: none; }
+
+fieldset {
+  border: 1px solid #c0c0c0;
+  margin: 0 2px;
+  padding: 0.35em 0.625em 0.75em; }
+
+legend {
+  border: 0;
+  padding: 0; }
+
+textarea {
+  overflow: auto; }
+
+optgroup {
+  font-weight: bold; }
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0; }
+
+td,
+th {
+  padding: 0; }
+
+ul {
+  padding: 0;
+  margin: 0;
+  list-style: none; }
+
+.hidden {
+  visibility: hidden; }
+
+.file-msg-wrap .imui-msg-content .msg-body-html {
+  padding: 0;
+  background: none;
+  border: none;
+  display: flex; }
+  .file-msg-wrap .imui-msg-content .msg-body-html:before, .file-msg-wrap .imui-msg-content .msg-body-html:after {
+    display: none; }
+
+.file-msg {
+  background: #fcfcfc;
+  padding: 10px;
+  display: flex;
+  position: relative;
+  width: 260px;
+  border: 1px solid #e6e6e6;
+  border-radius: 2px;
+  flex: 1; }
+  .file-msg .hidden {
+    visibility: hidden;
+    opacity: 0; }
+  .file-msg .file-info {
+    flex: 1; }
+  .file-msg .file-suffix {
+    width: 60px;
+    height: 60px;
+    text-align: center;
+    font-size: 20px;
+    color: #fff;
+    line-height: 60px;
+    border-radius: 2px;
+    margin-right: 10px;
+    cursor: pointer; }
+    .file-msg .file-suffix.suffix-red {
+      background: #f23c3c; }
+    .file-msg .file-suffix.suffix-orange {
+      background: #ffa033; }
+    .file-msg .file-suffix.suffix-blue {
+      background: #3089dc; }
+    .file-msg .file-suffix.suffix-green {
+      background: #1dc11d; }
+    .file-msg .file-suffix.suffix-gray {
+      background: #c0c0c0; }
+    .file-msg .file-suffix.suffix-zip {
+      background: #c0c0c0 url("https://img.alicdn.com/tfs/TB1_m05QpXXXXXHXVXXXXXXXXXX-8-40.png") no-repeat top center; }
+    .file-msg .file-suffix.suffix-default {
+      background: #c0c0c0 url("https://img.alicdn.com/tfs/TB16lFTQpXXXXccXVXXXXXXXXXX-35-40.png") no-repeat center center; }
+  .file-msg .file-name {
+    font-size: 14px;
+    color: #333;
+    cursor: pointer; }
+  .file-msg .file-size {
+    font-size: 12px;
+    color: #999; }
+  .file-msg .file-operation {
+    position: absolute;
+    right: 10px;
+    bottom: 8px;
+    font-size: 12px; }
+    .file-msg .file-operation a {
+      color: #3089dc;
+      margin-left: 16px; }
+      .file-msg .file-operation a .cancel-upload,
+      .file-msg .file-operation a .cancel-download {
+        color: #999; }
+  .file-msg .animation-width {
+    transition: width 0.2s ease; }
+  .file-msg .file-progress {
+    position: absolute;
+    height: 4px;
+    background: #d8d8d8;
+    left: 1px;
+    bottom: 1px;
+    right: 1px;
+    border-radius: 2px;
+    opacity: 1;
+    transition: visibility ease-in 0.5s; }
+    .file-msg .file-progress i {
+      display: block;
+      width: 0;
+      height: 100%;
+      background-image: linear-gradient(90deg, #03a9fe 0, #3882e4 100%);
+      border-radius: 2px; }
+
+@font-face {
+  font-family: "IMUIIcon";
+  src: url("https://at.alicdn.com/t/font_i0b3pgd2o9lik9.eot");
+  src: url("https://at.alicdn.com/t/font_i0b3pgd2o9lik9.eot?#iefix") format("embedded-opentype"), url("https://at.alicdn.com/t/font_i0b3pgd2o9lik9.woff") format("woff"), url("https://at.alicdn.com/t/font_i0b3pgd2o9lik9.ttf") format("truetype"), url("https://at.alicdn.com/t/font_i0b3pgd2o9lik9.svg#articonsvg") format("svg"); }
+
+.imui-icon, .imui-msg-menu-wrap .bubble-menu-trigger, .imui-msg-status .status-error, .imui-msg-location .imui-location-icon, .imui-msg-link .link-sf, .imui-msg-link-box .warning-icon {
+  font-family: "IMUIIcon" !important;
+  font-style: normal;
+  font-variant: normal;
+  text-transform: none;
+  -webkit-font-smoothing: antialiased;
+  -webkit-text-stroke-width: 0.1px;
+  -moz-osx-font-smoothing: grayscale; }
+  .imui-icon:before, .imui-msg-menu-wrap .bubble-menu-trigger:before, .imui-msg-status .status-error:before, .imui-msg-location .imui-location-icon:before, .imui-msg-link .link-sf:before, .imui-msg-link-box .warning-icon:before {
+    display: inline-block;
+    speak: none;
+    font-size: 16px;
+    line-height: 16px;
+    vertical-align: middle;
+    text-align: center; }
+  .imui-icon-lucymoney:before {
+    content: "\E66C"; }
+  .imui-icon-location:before, .imui-msg-location .imui-location-icon:before {
+    content: "\E66D"; }
+  .imui-icon-warn:before, .imui-msg-link.unknown-link .link-sf:before {
+    content: "\E66E"; }
+  .imui-icon-danger:before, .imui-msg-status .status-error:before, .imui-msg-link.danger-link .link-sf:before, .imui-msg-link-box .warning-icon:before {
+    content: "\E66F"; }
+  .imui-icon-safe:before, .imui-msg-link.safe-link .link-sf:before {
+    content: "\E670"; }
+  .imui-icon-unknown:before {
+    content: "\E671"; }
+  .imui-icon-trigger:before, .imui-msg-menu-wrap .bubble-menu-trigger:before {
+    content: "\E666"; }
+  .imui-icon-zip:before {
+    content: "\E672"; }
+  .imui-icon-defaultFile:before {
+    content: "\E673"; }
+  .imui-icon-shipin:before {
+    content: "\E74D"; }
+
+.imui-msg-date-split {
+  margin-top: 12px;
+  margin-bottom: -8px;
+  text-align: center;
+  color: #c7c7c7;
+  font-size: 12px; }
+
+/** Аватар **/
+.imui-msg-avatar {
+  width: 26px;
+  height: 26px;
+  background-image: url("https://gw.alicdn.com/tps/TB1jboTOXXXXXXCXVXXXXXXXXXX-160-160.png_40x40.jpg");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: 100%;
+  border-radius: 2px; }
+
+/** Слева от пузыря **/
+.imui-msg-l .imui-msg-avatar {
+  margin-right: 16px; }
+
+/** Справа от пузыря **/
+.imui-msg-r .imui-msg-avatar {
+  margin-left: 16px; }
+
+/** В режиме без пузырьков **/
+.imui-msg-normal-wrap .imui-msg-avatar {
+  display: none; }
+
+.imui-msg-head {
+  margin-bottom: 2px;
+  color: #999; }
+  .imui-msg-head .imui-msg-sender {
+    margin-right: 4px;
+    vertical-align: middle;
+    word-wrap: break-word; }
+  .imui-msg-head .imui-msg-date {
+    margin-right: 4px;
+    vertical-align: middle;
+    word-wrap: break-word; }
+
+.imui-msg-l .imui-msg-head {
+  text-align: left; }
+
+.imui-msg-l .imui-msg-sender {
+  color: #3089DC; }
+
+.imui-msg-r .imui-msg-head {
+  text-align: right;
+  justify-content: flex-end; }
+
+.imui-msg-r .imui-msg-sender {
+  color: #1E8A1E; }
+
+.imui-msg-normal-wrap .imui-msg-head {
+  text-align: left; }
+
+.imui-msg-normal-wrap .imui-msg-l .imui-msg-head {
+  text-align: left; }
+
+.imui-msg-normal-wrap .imui-msg-l .imui-msg-sender {
+  color: #3089DC; }
+
+.imui-msg-normal-wrap .imui-msg-r .imui-msg-sender {
+  color: #1E8A1E; }
+
+.imui-msg-content {
+  flex: 1; }
+  .imui-msg-content .msg-content-body {
+    display: flex; }
+  .imui-msg-content .msg-body-html {
+    position: relative;
+    padding: 8px 8px;
+    word-wrap: break-word;
+    word-break: break-all;
+    line-height: inherit;
+    min-width: 10px;
+    min-height: 14px;
+    font-size: 13px;
+    color: #525252;
+    border-radius: 2px;
+    max-width: 80%;
+    box-sizing: border-box; }
+    .imui-msg-content .msg-body-html:before, .imui-msg-content .msg-body-html:after {
+      position: absolute;
+      z-index: 1;
+      top: 4px;
+      content: ' ';
+      width: 0;
+      height: 0;
+      border: 7px solid; }
+  .imui-msg-content a {
+    color: #3089dc;
+    text-decoration: none; }
+    .imui-msg-content a:hover {
+      text-decoration: underline; }
+
+.imui-msg-l .msg-body-html {
+  background-color: #fafafa;
+  border: 1px solid #e6e6e6; }
+  .imui-msg-l .msg-body-html:before {
+    left: -14px;
+    border-color: transparent #e6e6e6 transparent transparent; }
+  .imui-msg-l .msg-body-html:after {
+    left: -13px;
+    border-color: transparent #fafafa transparent transparent; }
+
+.imui-msg-r .msg-content-body {
+  flex-direction: row-reverse; }
+
+.imui-msg-r .msg-body-html {
+  background-color: #E4F0FD;
+  border-color: #E4F0FD; }
+  .imui-msg-r .msg-body-html:before {
+    right: -14px;
+    border-color: transparent transparent transparent #E4F0FD; }
+  .imui-msg-r .msg-body-html:after {
+    right: -13px;
+    border-color: transparent transparent transparent #E4F0FD; }
+
+.imui-msg-normal-wrap .msg-content-body {
+  display: block;
+  padding-left: 12px;
+  max-width: 90%; }
+  .imui-msg-normal-wrap .msg-content-body .msg-body-html {
+    display: inline;
+    padding: 0;
+    border: none;
+    background: none; }
+    .imui-msg-normal-wrap .msg-content-body .msg-body-html:before, .imui-msg-normal-wrap .msg-content-body .msg-body-html:after {
+      display: none; }
+
+.imui-msg-op-wrap {
+  display: flex;
+  align-items: flex-end;
+  white-space: nowrap;
+  position: relative; }
+
+.imui-msg-l .imui-msg-op-wrap {
+  margin-left: 10px; }
+
+.imui-msg-l .imui-msg-menu-wrap {
+  left: 0; }
+
+.imui-msg-l .bubble-menu-list {
+  left: -30px; }
+
+.imui-msg-r .imui-msg-op-wrap {
+  margin-right: 10px; }
+
+.imui-msg-r .imui-msg-menu-wrap {
+  right: 0; }
+
+.imui-msg-r .bubble-menu-list {
+  right: -23px; }
+
+/** меню **/
+.imui-msg-menu-wrap {
+  position: absolute;
+  display: block;
+  top: 0;
+  outline: 0;
+  width: 14px;
+  height: 14px;
+  /** Кнопка запуска меню **/ }
+  .imui-msg-menu-wrap .bubble-menu-trigger {
+    position: relative;
+    visibility: hidden;
+    display: block;
+    overflow: hidden;
+    width: 14px;
+    height: 14px;
+    background: #B6D0EA;
+    border-radius: 2px;
+    cursor: pointer;
+    color: #fff; }
+    .imui-msg-menu-wrap .bubble-menu-trigger:before {
+      position: absolute;
+      left: -33px;
+      top: -1px; }
+  .imui-msg-menu-wrap .bubble-menu-list {
+    visibility: hidden;
+    position: absolute;
+    bottom: 20px;
+    background: #fff;
+    border-radius: 3px;
+    box-shadow: 0 0 8px rgba(0, 0, 0, 0.15);
+    z-index: 100; }
+    .imui-msg-menu-wrap .bubble-menu-list ul {
+      list-style-type: none; }
+    .imui-msg-menu-wrap .bubble-menu-list:before, .imui-msg-menu-wrap .bubble-menu-list:after {
+      position: absolute;
+      left: 30px;
+      content: ' ';
+      width: 0;
+      height: 0;
+      border: 6px solid; }
+    .imui-msg-menu-wrap .bubble-menu-list:before {
+      z-index: 1;
+      bottom: -11px;
+      border-color: #fff transparent transparent transparent; }
+    .imui-msg-menu-wrap .bubble-menu-list:after {
+      z-index: 0;
+      bottom: -12px;
+      border-color: #eaeaea transparent transparent transparent; }
+    .imui-msg-menu-wrap .bubble-menu-list li {
+      height: 30px;
+      line-height: 30px;
+      cursor: pointer;
+      text-align: center;
+      width: 66px; }
+      .imui-msg-menu-wrap .bubble-menu-list li:hover {
+        background: #EFF8FF; }
+
+.imui-msg-status .status-icon {
+  width: 14px;
+  height: 14px;
+  text-align: center;
+  display: block;
+  line-height: 14px; }
+
+.imui-msg-status .status-loading {
+  background: url("https://img.alicdn.com/tps/TB1zx0RKXXXXXbWXFXXXXXXXXXX-16-16.gif") no-repeat center; }
+
+.imui-msg-status .status-error {
+  color: #FF3333;
+  cursor: pointer; }
+  .imui-msg-status .status-error:before {
+    font-size: 14px; }
+
+.imui-msg-status .status-read-count {
+  color: #1a92ed;
+  cursor: pointer; }
+
+.imui-msg-status .status-read-done {
+  color: #999;
+  cursor: default; }
+
+:not(.imui-msg):first-child + .imui-msg .imui-msg-op-wrap .imui-msg-menu-wrap .bubble-menu-list:before,
+.imui-msg:first-child .imui-msg-op-wrap .imui-msg-menu-wrap .bubble-menu-list:before {
+  bottom: auto;
+  top: -11px;
+  border-color: transparent transparent #fff transparent; }
+
+:not(.imui-msg):first-child + .imui-msg .imui-msg-op-wrap .imui-msg-menu-wrap .bubble-menu-list:after,
+.imui-msg:first-child .imui-msg-op-wrap .imui-msg-menu-wrap .bubble-menu-list:after {
+  bottom: auto;
+  top: -12px;
+  border-color: transparent transparent #eaeaea transparent; }
+
+:not(.imui-msg):first-child + .imui-msg .imui-msg-op-wrap .imui-msg-menu-wrap .bubble-menu-list.bml-i1,
+.imui-msg:first-child .imui-msg-op-wrap .imui-msg-menu-wrap .bubble-menu-list.bml-i1 {
+  bottom: -36px; }
+
+:not(.imui-msg):first-child + .imui-msg .imui-msg-op-wrap .imui-msg-menu-wrap .bubble-menu-list.bml-i2,
+.imui-msg:first-child .imui-msg-op-wrap .imui-msg-menu-wrap .bubble-menu-list.bml-i2 {
+  bottom: -72px; }
+
+:not(.imui-msg):first-child + .imui-msg .imui-msg-op-wrap .imui-msg-menu-wrap .bubble-menu-list.bml-i3,
+.imui-msg:first-child .imui-msg-op-wrap .imui-msg-menu-wrap .bubble-menu-list.bml-i3 {
+  bottom: -108px; }
+
+.imui-msg:hover .imui-msg-menu-wrap:focus .bubble-menu-list {
+  visibility: visible; }
+
+.imui-msg:hover .imui-msg-menu-wrap .bubble-menu-trigger {
+  visibility: visible; }
+
+.imui-msg-normal-wrap .imui-msg-op-wrap {
+  display: inline; }
+  .imui-msg-normal-wrap .imui-msg-op-wrap .imui-msg-menu-wrap {
+    display: none; }
+  .imui-msg-normal-wrap .imui-msg-op-wrap .status-icon {
+    display: inline-block; }
+  .imui-msg-normal-wrap .imui-msg-op-wrap .imui-msg-status {
+    display: inline; }
+
+.imui-msg-entering {
+  position: absolute;
+  width: 30px;
+  height: 10px;
+  left: 10px;
+  bottom: 10px;
+  z-index: 999;
+  background: url("https://img.alicdn.com/tps/TB1MYzXLXXXXXcwXFXXXXXXXXXX-31-7.gif") no-repeat center; }
+
+.imui-msg-audio {
+  min-width: 80px;
+  max-width: 200px;
+  height: 20px;
+  line-height: 24px;
+  cursor: pointer;
+  overflow: hidden;
+  margin: -4px -4px; }
+  .imui-msg-audio:before {
+    content: ' ';
+    display: block;
+    width: 20px;
+    height: 20px;
+    background: url("https://img.alicdn.com/tps/TB1dVtCKXXXXXX.aXXXXXXXXXXX-30-30.png") no-repeat center 2px;
+    background-size: 100%;
+    margin-top: -1px; }
+  .imui-msg-audio.imui-msg-audio-playing:before {
+    background: url("https://img.alicdn.com/tps/TB1u5tPKXXXXXc8XFXXXXXXXXXX-30-30.gif") no-repeat center 2px;
+    background-size: 100%; }
+
+.imui-msg-l .imui-msg-audio {
+  text-align: right;
+  padding: 0 10px 0 5px; }
+  .imui-msg-l .imui-msg-audio:before {
+    float: left; }
+
+.imui-msg-r .imui-msg-audio {
+  padding: 0 5px 0 10px;
+  text-align: left; }
+  .imui-msg-r .imui-msg-audio:before {
+    float: right; }
+
+.imui-msg-normal-wrap .imui-msg-audio {
+  display: inline-block;
+  background: #fff;
+  border: 1px solid #e6e6e6;
+  height: 26px;
+  border-radius: 2px;
+  line-height: 26px;
+  margin: 0;
+  text-align: right; }
+  .imui-msg-normal-wrap .imui-msg-audio:before {
+    float: left;
+    margin-top: 2px; }
+
+.imui-msg-location {
+  color: #333; }
+  .imui-msg-location .imui-location-icon {
+    margin-right: 2px; }
+    .imui-msg-location .imui-location-icon:before {
+      color: #FF3333; }
+  .imui-msg-location:hover {
+    text-decoration: none; }
+
+.imui-msg-link {
+  color: #3089dc; }
+  .imui-msg-link .link-sf {
+    margin-right: 2px; }
+  .imui-msg-link:before {
+    vertical-align: -1px;
+    margin-right: 3px; }
+  .imui-msg-link.safe-link .link-sf:before {
+    color: #1DC11D; }
+  .imui-msg-link.unknown-link .link-sf:before {
+    color: #FFA033; }
+  .imui-msg-link.danger-link .link-sf:before {
+    color: #FF3333; }
+
+.imui-msg-card {
+  -webkit-box-direction: normal;
+  padding: 4px;
+  background: #fff; }
+
+.imui-msg-normal-wrap .imui-msg-card {
+  border: 1px solid #dfdfdf;
+  border-radius: 2px;
+  margin-bottom: 3px;
+  padding: 4px; }
+
+.imui-msg-img {
+  max-width: 100%;
+  display: block; }
+  .imui-msg-img.imui-msg-img-loading {
+    display: block;
+    width: 24px;
+    height: 20px;
+    background: url("https://img.alicdn.com/tps/TB1NIadKXXXXXXnXXXXXXXXXXXX-48-40.png") no-repeat center;
+    background-size: 100%; }
+
+.imui-msg-emoji {
+  display: inline;
+  vertical-align: middle; }
+
+.imui-msg-system {
+  color: #999;
+  text-align: center;
+  margin: 20px auto;
+  font-size: 12px;
+  line-height: 20px;
+  width: 85%; }
+  .imui-msg-system > span {
+    display: inline-block;
+    background: #EEE;
+    padding: 2px 10px;
+    border-radius: 2px;
+    word-wrap: break-word;
+    word-break: break-all; }
+
+.imui-msg-atmsg {
+  color: #0073BD; }
+
+.imui-msg video {
+  max-width: 240px;
+  display: block;
+  -webkit-user-select: none; }
+  .imui-msg video::-webkit-media-controls-fullscreen-button, .imui-msg video::-webkit-media-controls-volume-slider, .imui-msg video::-webkit-media-controls-mute-button {
+    display: none; }
+
+.imui-msg-link-box {
+  font-size: 12px;
+  color: #000000;
+  position: relative;
+  width: 260px;
+  border: 1px solid #E6E7EB;
+  padding: 10px 30px;
+  line-height: 15px;
+  overflow: hidden;
+  box-shadow: 1px 1px 6px 0 #999;
+  background: #fefce7;
+  -webkit-user-select: none;
+  z-index: 999; }
+  .imui-msg-link-box .warning-icon {
+    display: block;
+    width: 16px;
+    height: 16px;
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    text-align: center;
+    color: #FF3333; }
+    .imui-msg-link-box .warning-icon:before {
+      font-size: 12px;
+      vertical-align: -1px; }
+  .imui-msg-link-box .warning-text {
+    font-weight: bold; }
+  .imui-msg-link-box .warning-actions {
+    margin-top: 10px; }
+  .imui-msg-link-box .warning-action {
+    color: #333333;
+    text-decoration: underline;
+    margin-right: 16px; }
+  .imui-msg-link-box .warning-color {
+    color: #FF3333; }
+
+.imui-msg-new-msg-box {
+  position: fixed;
+  bottom: 4px;
+  right: 4px;
+  background: #ababab;
+  text-align: center;
+  line-height: 20px;
+  color: #fff;
+  font-size: 10px;
+  padding: 2px 10px;
+  border-radius: 20px;
+  z-index: 999;
+  cursor: pointer; }
+  .imui-msg-new-msg-box:before {
+    position: absolute;
+    display: block;
+    width: 9px;
+    height: 9px;
+    right: 2px;
+    bottom: 0;
+    content: ' ';
+    background: #ababab;
+    transform: skewX(30deg); }
+
+/* Контейнер сообщений */
+.imui-msg {
+  display: flex;
+  margin: 20px 0;
+  font-size: 12px;
+  line-height: 1.5; }
+
+/* Контейнер сообщений справа */
+.imui-msg-r {
+  flex-direction: row-reverse; }
+
+@font-face {
+  font-family: IMUIIcon;
+  src: url("../iconfonts/IMUIIcon.woff") format("woff"), url("../iconfonts/IMUIIcon.ttf") format("truetype"); }
+
+/**
+ * News loading
+ */
+.msg-loading {
+  background: url("../images/mediaload.gif") no-repeat center; }
+
+.button-gray {
+  font-size: 12px;
+  border: 1px solid;
+  cursor: pointer;
+  text-align: center;
+  border-color: #ccc;
+  background-color: #fff;
+  color: #333; }
+  .button-gray:hover {
+    background-color: #efefef; }
+
+.button-blue {
+  font-size: 12px;
+  border: 1px solid;
+  cursor: pointer;
+  text-align: center;
+  border-color: #0275d8;
+  background-color: #0275d8;
+  color: #fff; }
+  .button-blue:hover {
+    border-color: #01549b;
+    background-color: #025aa5; }
+
+.button-naked {
+  color: #014c8c;
+  text-decoration: none;
+  text-align: center; }
+  .button-naked:hover {
+    text-decoration: underline; }
+
+/**
+ * автоматический ответ
+ */
+.auto-reply-text {
+  color: #ec4e00; }
+
+.auto-reply-tip {
+  color: #004BE3 !important;
+  padding-left: 8px;
+  text-decoration: underline !important; }
+
+.imui-msg-card-wrap {
+  display: inline-block; }
+
+.temp20014-wrap {
+  overflow: hidden;
+  border: 1px solid #e6e6e6;
+  width: 264px;
+  border-radius: 2px; }
+  .temp20014-wrap .temp20014-box::-webkit-scrollbar {
+    width: 4px;
+    height: 4px; }
+  .temp20014-wrap .temp20014-box::-webkit-scrollbar-thumb {
+    width: 4px - 2px;
+    height: 4px - 2px;
+    background-color: transparent;
+    border-right: 1px solid #fff;
+    border-radius: 4px - 2px; }
+  .temp20014-wrap .temp20014-box:hover::-webkit-scrollbar-thumb {
+    background-color: rgba(0, 0, 0, 0.2); }
+  .temp20014-wrap .temp20014-box::-webkit-scrollbar-thumb:hover {
+    background-color: rgba(0, 0, 0, 0.5); }
+  .temp20014-wrap.small {
+    width: 264px; }
+  .temp20014-wrap.middle {
+    width: 324px; }
+  .temp20014-wrap.large {
+    width: 396px; }
+
+.temp20014-msg .msg-body-html {
+  background: none;
+  border: none;
+  padding: 0; }
+  .temp20014-msg .msg-body-html:before, .temp20014-msg .msg-body-html:after {
+    display: none; }
+
+.temp20014-msg .imui-msg-op-wrap {
+  display: none; }
+
+.lucy-money > .temp20014-box > .temp20014-box:first-child {
+  left: 0 !important;
+  width: 264px !important; }
+
+.lucy-money.small > .temp20014-box > .temp20014-box:first-child {
+  width: 264px !important; }
+
+.lucy-money.middle > .temp20014-box > .temp20014-box:first-child {
+  width: 324px !important; }
+
+.lucy-money.large > .temp20014-box > .temp20014-box:first-child {
+  width: 396px !important; }
+
+.lucy-money > .temp20014-box > .temp20014-box:last-child {
+  left: 0 !important;
+  top: 75px !important; }
+
+.lucy-money.small > .temp20014-box > .temp20014-box:last-child {
+  top: 75px !important; }
+
+.lucy-money.middle > .temp20014-box > .temp20014-box:last-child {
+  top: 92px !important; }
+
+.lucy-money.large > .temp20014-box > .temp20014-box:last-child {
+  top: 110px !important; }
+
+.imui-msg-audio {
+  max-width: 240px;
+  min-width: 60px; }
+
+.imui-msg-l .imui-msg-audio {
+  padding: 0 10px 3px 5px; }
+
+.imui-msg-r .imui-msg-audio {
+  padding: 0 5px 3px 10px; }
+
+.go-audio-text-setting {
+  color: #3089dc; }
+
+.audio-text {
+  display: none;
+  max-width: 240px;
+  margin-top: 5px;
+  padding-top: 6px;
+  color: #333;
+  border-top: 1px solid #e3e3e3;
+  width: 100%;
+  font-size: 12px; }
+
+.show-audio-text .audio-text {
+  display: inline-block; }
+
+.imui-msg-normal-wrap .audio-wrap {
+  display: inline-block;
+  border: 1px solid #e6e6e6;
+  border-radius: 2px;
+  padding: 0 5px;
+  background: #fff; }
+  .imui-msg-normal-wrap .audio-wrap .imui-msg-audio {
+    border: none;
+    display: block; }
+  .imui-msg-normal-wrap .audio-wrap .audio-text {
+    margin: 0;
+    padding: 6px 0; }
+
+.face-time .imui-icon-shipin {
+  vertical-align: middle;
+  color: #999; }
+
+.face-time .face-time-trigger {
+  display: none; }
+
+.face-time:hover .face-time-result {
+  display: none; }
+
+.face-time:hover .face-time-trigger {
+  display: initial;
+  color: #3089dc;
+  cursor: pointer; }
+.toast {
+  position: fixed;
+  top: 50%;
+  left: 50%; }
+  .toast span {
+    margin-left: -50%;
+    margin-top: -50%;
+    background: rgba(0, 0, 0, 0.8);
+    color: #fff;
+    border-radius: 4px;
+    padding: 10px 20px;
+    font-size: 14px; }
+.popup-over {
+  position: fixed;
+  z-index: 1000; }
+.imui-msg-new-msg-box {
+  position: absolute; }
+@charset "UTF-8";
+.auto-scroll-btn {
+  display: none;
+  width: 10px;
+  height: 7px;
+  position: absolute;
+  right: 0;
+  cursor: pointer; }
+
+.to-end {
+  bottom: 0;
+  background: url("../images/icon-to-end.png") no-repeat center; }
+
+.to-top {
+  top: 0;
+  background: url("../images/icon-to-start.png") no-repeat center; }
+
+::-webkit-scrollbar {
+  background: transparent;
+  width: 10px;
+  height: 10px; }
+
+::-webkit-scrollbar-track-piece {
+  display: none; }
+
+::-webkit-scrollbar-track {
+  border-radius: 5px;
+  background-color: transparent;
+  margin-bottom: 7px;
+  margin-top: 7px; }
+
+::-webkit-scrollbar-track:hover::-webkit-scrollbar-thumb {
+  background-color: #d5d5d5; }
+
+::-webkit-scrollbar-thumb {
+  background-color: rgba(0, 0, 0, 0.3);
+  width: 8px;
+  height: 8px;
+  border: 2px solid transparent;
+  border-radius: 5px;
+  background-clip: content-box;
+  min-height: 30px; }
+
+::-webkit-scrollbar-thumb:hover {
+  background-color: rgba(0, 0, 0, 0.4); }
+
+::-webkit-scrollbar-thumb:active {
+  background-color: rgba(0, 0, 0, 0.5); }
+
+.scrollbar-small::-webkit-scrollbar {
+  background: transparent;
+  width: 8px;
+  height: 8px; }
+
+.scrollbar-small::-webkit-scrollbar-track {
+  border-radius: 2px;
+  background-color: transparent; }
+
+.scrollbar-small::-webkit-scrollbar-thumb {
+  border: 2px solid transparent;
+  border-radius: 4px;
+  background-clip: content-box; }
+
+html, body {
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  background: #fbfbfb; }
+
+body {
+  display: flex;
+  flex-flow: column nowrap;
+  font-family: "microsoft yahei"; }
+
+.msg-outer-body {
+  display: flex;
+  flex-flow: column nowrap;
+  flex: 1;
+  position: relative;
+  overflow: hidden; }
+
+.msg-wrap {
+  flex: 1;
+  overflow: auto;
+  padding: 0 16px;
+  position: relative; }
+
+.imui-msg-l .imui-msg-op-wrap {
+  margin-left: 6px; }
+
+.imui-msg-r .imui-msg-op-wrap {
+  margin-right: 6px; }
+
+/**
+ * Наложение стиля картинки
+ */
+.imui-msg-img {
+  max-width: 100%;
+  max-height: 500px;
+  display: inline-block; }
+
+/**
+ * Умный робот значок
+ */
+.robot-icon {
+  display: inline-block;
+  width: 17px;
+  height: 12px;
+  vertical-align: -1px;
+  background: url("../images/icon-robot.png") no-repeat center;
+  margin: 0 5px; }
+
+/**
+ * News loading
+ */
+.msg-loading {
+  position: absolute;
+  top: 5px;
+  left: 0;
+  background: url("../images/mediaload.gif") no-repeat center;
+  height: 20px;
+  width: 100%; }
+
+/**
+ * @Сообщение было прочитано, напоминание о непрочитанном номере
+ */
+.add-at {
+  cursor: pointer; }
+  .add-at:hover {
+    color: #3089dc !important; }
+
+.item-snapshot-wrap {
+  margin-left: -6px; }
+
+/**
+ * Стиль слияния сообщений
+ */
+.imui-msg-normal-wrap.msg-merge-wrap .msg-fold {
+  margin-top: -12px; }
+  .imui-msg-normal-wrap.msg-merge-wrap .msg-fold .imui-msg-head {
+    display: none; }
+
+.imui-msg-normal-wrap .imui-msg-head {
+  margin-bottom: 6px; }
+
+.imui-msg-normal-wrap .imui-msg-content .msg-body-html {
+  line-height: 1.4;
+  display: inline; }
+
+.imui-msg-normal-wrap .imui-msg-content .imui-msg-status {
+  display: inline; }
+  .imui-msg-normal-wrap .imui-msg-content .imui-msg-status .status-icon {
+    display: inline-block; }
+
+.imui-msg-normal-wrap .imui-msg-card {
+  display: inline-block; }
+
+/* Это историческая разделительная линия. */
+.history-split {
+  font-size: 12px;
+  color: #999;
+  text-align: center;
+  position: relative;
+  margin-bottom: 30px; }
+  .history-split i {
+    position: absolute;
+    display: block;
+    width: 80%;
+    height: 1px;
+    background: #ddd;
+    left: 50%;
+    top: 50%;
+    margin-left: -40%; }
+  .history-split span {
+    position: relative;
+    background: #fbfbfb;
+    padding: 0 10px;
+    z-index: 1; }
+
+.history-split:first-child {
+  display: none; }
+.select-popup-box {
+  background: #fff;
+  border: 1px solid #d8d8d8;
+  border-radius: 2px;
+  padding: 0 5px;
+  font-size: 12px; }
+  .select-popup-box span,
+  .select-popup-box s {
+    text-decoration: none;
+    padding: 5px 6px;
+    color: #333;
+    vertical-align: middle;
+    line-height: 24px; }
+  .select-popup-box .split-line {
+    color: #d8d8d8; }
+  .select-popup-box span {
+    cursor: pointer; }
+.reminder-msg-wrap {
+  position: relative; }
+  .reminder-msg-wrap .tip-close {
+    display: block;
+    width: 16px;
+    height: 16px;
+    position: absolute;
+    right: 4px;
+    top: 50%;
+    margin-top: -8px;
+    background: url("../images/icon-close.png") no-repeat 0 0;
+    cursor: pointer; }
+
+.tip-default,
+.tip-yellow,
+.tip-blue {
+  font-size: 12px;
+  background: #F9F9C4;
+  height: 23px;
+  line-height: 25px;
+  text-align: center;
+  border-radius: 2px;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  white-space: nowrap;
+  padding: 0 20px; }
+  .tip-default a,
+  .tip-yellow a,
+  .tip-blue a {
+    color: #333;
+    text-decoration: none; }
+    .tip-default a:hover,
+    .tip-yellow a:hover,
+    .tip-blue a:hover {
+      text-decoration: underline; }
+  .tip-default .close-tip,
+  .tip-yellow .close-tip,
+  .tip-blue .close-tip {
+    position: absolute;
+    right: 10px;
+    top: 10px; }
+
+.tip-blue {
+  background: #f5fbff;
+  z-index: 9997; }
+  .tip-blue.active {
+    z-index: 9998; }
+  .tip-blue a {
+    color: #1A92ED; }
+
+.tip-default a {
+  color: #1A92ED; }
+.imui-msg-link-box .warning-icon {
+  background: url("../images/icon-unknown-url.bmp") no-repeat 0 -1px !important;
+  width: 18px;
+  height: 18px; }
+
+.warning-text {
+  font-size: 14px; }
+
+.imui-msg-link-box {
+  background: #fff; }
+
+.imui-msg-link-box .warning-action {
+  color: #3089dc !important;
+  text-decoration: none; }
+
+.url-tip {
+  margin-top: 10px; }
+  .url-tip a {
+    color: #999; }
+.folder-wrap {
+  position: absolute;
+  left: 0;
+  top: 30%;
+  bottom: 30%;
+  width: 10px; }
+  .folder-wrap:hover .folder {
+    visibility: visible; }
+  .folder-wrap .folder {
+    background: url("../images/fold-trigger.png") no-repeat center center;
+    position: absolute;
+    top: 50%;
+    left: 0;
+    margin-top: -45px;
+    width: 10px;
+    height: 87px;
+    text-align: center;
+    color: #fff;
+    line-height: 87px;
+    cursor: pointer;
+    overflow: hidden;
+    font-family: monospace;
+    visibility: hidden; }
+@charset "UTF-8";
+.ww-file-msg {
+  width: 250px;
+  font-size: 12px;
+  display: -webkit-flex; }
+  .ww-file-msg .ww-file-ext {
+    position: relative;
+    display: block;
+    width: 30px;
+    height: 40px;
+    text-align: center;
+    background: #1A92ED;
+    line-height: 60px;
+    font-size: 9px;
+    color: #eee;
+    border-radius: 2px;
+    margin-right: 8px;
+    overflow: hidden; }
+    .ww-file-msg .ww-file-ext i {
+      display: block;
+      position: absolute;
+      top: 0;
+      right: 0;
+      width: 0;
+      height: 0;
+      border: 6px solid;
+      border-color: #eee #eee #1A92ED #1A92ED;
+      box-shadow: 0 0 4px #eee; }
+  .ww-file-msg .ww-file-info {
+    flex: 1; }
+    .ww-file-msg .ww-file-info h4 {
+      margin: 0 0 1px 0;
+      font-weight: normal;
+      font-size: 12px;
+      line-height: 18px; }
+      .ww-file-msg .ww-file-info h4:before, .ww-file-msg .ww-file-info h4:after {
+        content: '';
+        line-height: 0;
+        display: table; }
+      .ww-file-msg .ww-file-info h4:after {
+        clear: both; }
+    .ww-file-msg .ww-file-info .ww-file-name {
+      display: inline-block;
+      float: left;
+      max-width: 140px;
+      text-overflow: ellipsis;
+      overflow: hidden;
+      white-space: nowrap; }
+    .ww-file-msg .ww-file-info .ww-file-size {
+      display: inline-block;
+      float: left;
+      max-width: 62px;
+      text-align: right;
+      margin-left: 20px; }
+    .ww-file-msg .ww-file-info .ww-file-tip {
+      font-size: 10px;
+      margin-bottom: 5px;
+      color: #666;
+      line-height: 15px;
+      text-overflow: ellipsis;
+      overflow: hidden;
+      white-space: nowrap; }
+    .ww-file-msg .ww-file-info .ww-file-operation a {
+      color: #1A92ED;
+      cursor: pointer;
+      margin-right: 10px; }
+    .ww-file-msg .ww-file-info .ww-file-warning {
+      margin-bottom: 5px; }
+  .ww-file-msg .warning {
+    color: red; }
+
+.imui-msg-r .ww-file-msg .ww-file-ext i {
+  border-color: #E4F0FD #E4F0FD #1A92ED #1A92ED; }
+
+html, body {
+  background: #fff; }
+
+.imui-msg-head .add-at {
+  color: #999 !important;
+  visibility: hidden;
+  vertical-align: middle; }
+  .imui-msg-head .add-at:hover {
+    color: #0073bd !important; }
+
+.imui-msg:hover .add-at {
+  visibility: visible; }
+
+.imui-msg-l .imui-msg-head .imui-msg-sender {
+  color: #999; }
+
+.imui-msg-r .imui-msg-head .imui-msg-sender {
+  opacity: 0; }
+
+.imui-msg-l .msg-body-html {
+  background: #eee;
+  border-color: #eee; }
+  .imui-msg-l .msg-body-html:before, .imui-msg-l .msg-body-html:after {
+    border-color: transparent #eee transparent transparent; }
+
+.imui-msg-status .status-read-done {
+  color: #999 !important;
+  cursor: default !important; }
+
+.imui-msg-l .imui-msg-content .imui-msg-head {
+  margin-right: 30px; }
+
+.imui-msg-l .imui-msg-content .msg-content-body {
+  margin-right: 100px; }
+
+.imui-msg-r .imui-msg-content .imui-msg-head {
+  margin-left: 30px; }
+
+.imui-msg-r .imui-msg-content .msg-content-body {
+  margin-left: 100px; }
+
+.imui-msg-content .msg-body-html {
+  max-width: 100%; }
+
+.imui-msg-avatar {
+  border-radius: 2px; }
+
+.imui-msg-status {
+  align-items: flex-end; }
+
+.imui-msg-r .imui-msg-status {
+  margin-right: 6px; }
+
+.imui-msg-l .imui-msg-status {
+  margin-left: 6px; }
+
+.imui-msg-new-msg-box {
+  position: fixed;
+  bottom: 4px;
+  right: 4px;
+  background: #ababab;
+  text-align: center;
+  line-height: 20px;
+  color: #fff;
+  font-size: 10px;
+  padding: 2px 10px;
+  border-radius: 20px;
+  z-index: 999;
+  cursor: pointer; }
+
+.imui-msg-new-msg-box:before {
+  position: absolute;
+  display: block;
+  width: 9px;
+  height: 9px;
+  right: 2px;
+  bottom: 0;
+  content: ' ';
+  background: #ababab;
+  -webkit-transform: skewX(30deg);
+  transform: skewX(30deg); }
+
+.imui-msg-img {
+  display: block; }
+
+.emotion-image {
+  display: inline-block;
+  width: 32px; }
+
+.imui-msg video {
+  max-width: 240px; }
+
+.menu-hidden {
+  display: none; }
+
+.single-msg-read-status {
+  display: none; }
+
+.show-read-status .single-msg-read-status {
+  display: initial; }
+
+.show-msg-menu .menu-hidden {
+  display: initial; }
+
+/**
+ * Значок ссылки наложения
+ */
+.imui-msg-link.safe-link .link-sf:before {
+  content: '';
+  display: inline-block;
+  width: 18px;
+  height: 18px;
+  vertical-align: middle;
+  margin-right: 3px;
+  background: url("../images/icon-safe-url.bmp") no-repeat 0 -1px; }
+
+.imui-msg-link.unsafe-link .link-sf:before {
+  content: '';
+  display: inline-block;
+  width: 18px;
+  height: 18px;
+  vertical-align: middle;
+  margin-right: 3px;
+  background: url("../images/icon-unsafe-url.bmp") no-repeat 0 -1px; }
+
+.imui-msg-link .link-sf:before,
+.imui-msg-link.unknown-link .link-sf:before {
+  content: '';
+  display: inline-block;
+  width: 18px;
+  height: 18px;
+  vertical-align: middle;
+  margin-right: 3px;
+  background: url("../images/icon-unknown-url.bmp") no-repeat 0 -1px; }

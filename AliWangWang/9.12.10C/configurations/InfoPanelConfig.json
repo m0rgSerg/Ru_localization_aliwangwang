@@ -1,0 +1,22 @@
+[ {
+   "nick": "Мой фокус",
+   "show": true,
+   "site": "/wwxb.1.2",
+   "type": 0,
+   "uid": "focus",
+   "url": "focus"
+}, {
+   "nick": "Мой Таобао",
+   "show": true,
+   "site": "/wwxb.9.2",
+   "type": 0,
+   "uid": "MineTaoBao",
+   "url": "tao"
+}, {
+   "nick": "Календарь событий",
+   "show": false,
+   "site": "/wwxb.2.80",
+   "type": 0,
+   "uid": "calen",
+   "url": "calen"
+}]
